@@ -1,0 +1,283 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: blue;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4893aa, #50abbb);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,mediumvioletred ,  #50abbb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container{
+  position:relative;
+  max-width: 1050px;
+  height:100%;
+  width: 100%;
+  padding: 40px 50px  40px  40px;
+  background: purple;
+  margin:80px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media only screen and (max-width: 600px){
+    .container{
+        height:auto;
+        margin:20px;
+    }
+    .content .list .title{
+        display:none;
+    }
+}
+.container .topic{
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color:#ee82ee;
+  font-family: 'Dancing Script', cursive;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.content .list{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  position: relative;
+}
+.content .list label{
+  height: 60px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  padding-left: 15px;
+  transition: all 0.5s ease;
+  color: black;
+  z-index: 12;
+
+}
+#home:checked ~ .list label.home,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about{
+  color: pink;
+}
+.content .list label:hover{
+  color: black;
+}
+.content .slider{
+  position:absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 80%;
+  border-radius: 20px;
+  background: #ee82ee;
+  transition: all 0.4s ease;
+}
+#home:checked ~ .list .slider{
+  top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#blog:checked ~ .list .slider{
+  top: 120px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#help:checked ~ .list .slider{
+  top: 180px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#code:checked ~ .list .slider{
+  top: 240px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#about:checked ~ .list .slider{
+  top: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content .text-content{
+  width: 80%;
+  height: 100%;
+  color:#fff;
+}
+
+.content .text{
+  display: none;
+}
+.content .text .title{
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.content .text p{
+  text-align: justify;
+}
+.content .text-content .home{
+  display: block;
+  font-size: 15px;
+  font-weight: 50;
+  margin-bottom: 2px;
+  color:wheat;
+  font-family: 'Dancing Script', cursive;
+}
+ #home:checked ~ .text-content .home,
+ #blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about{
+  display: block;
+  
+}
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home{
+  display: none;
+}
+.content input{
+  display: none;
+}
+
+.home text{
+  position:absolute;
+  overflow: hidden;
+}
+.about text{
+  position:absolute;
+}
+.blog text{
+  position:absolute;
+}
+.help text{
+  position:absolute;
+}
+.code text{
+  position:absolute;
+}
+.skillcontainer {
+    width: 100%;
+    background-color: #ddd;
+    border-radius:30px; 
+    height:20px;
+  }
+  
+  .skills {
+    text-align: right;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    color: rgb(221, 213, 213);
+    border-radius:30px; 
+    font-size:15px
+  }
+  
+  .html {width: 90%;
+    height:20px; 
+    background-color: #04AA6D; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+  .css {width: 80%;
+    height:20px;
+     background-color: #2196F3;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  .js {width: 65%;
+    height:20px; 
+    background-color: #f44336;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  .PHP {width: 60%;
+    height:20px; 
+    background-color: #808080;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+  .percentage{
+      color:#000;
+      font-weight: 900;
+  }
+
+  
+
+  .btn-grad {background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%)}
+  .btn-grad {
+     margin: 10px;
+     padding: 15px;
+     text-align: center;
+     text-transform: uppercase;
+     text-decoration: none;
+     cursor: pointer;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: #000;            
+     border-radius: 10px;
+     display: block;
+     border:none;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+
+   .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     text-decoration: none;
+   }
+  
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 45%;
+  padding:5px;
+  margin:5px;
+  height:250px; /* Should be removed. Only for demonstration */
+}
+@media only screen and (max-width: 600px){
+
+  .column{
+    width: 100%;
+  }
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  width: 80%;
+  height:200px
+}
+.card img{
+  border-radius:15px
+}
+.containername {
+  text-align:center;
+  padding: 2px 16px;
+}
+
+/*Contact details*/
+textarea{
+  resize: none;
+  width: 92%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  /*background: #BEAFC2;*/
+  background: #F0F1F8;
+  margin-left: 25px;
+  padding: 0 15px;
+  font-size: 15px;
+}
+
+          
